@@ -73,8 +73,9 @@ val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
-### Datos de acuerdo  a cada Etnia  
-```scala
+  
+  ### Datos de acuerdo  a cada Etnia  
+  ```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
 val dataMes = dataProvCant.where($"etnia" === "6 - Mestizo")
