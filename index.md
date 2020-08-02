@@ -71,7 +71,7 @@ val dataProvCantones = innerProvince.join(dataCant, innerProvince("canton") === 
 ```scala
 val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```
-## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES
+## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 ### Datos de acuerdo  a cada Etnia  
 ```scala
@@ -90,17 +90,15 @@ la etnia Blanco con 60000, que considerando que la población que participo en l
 
 ## Ingreso Laboral mínimo de cada etnia (Global)
 Aunque la tabla no muestra datos tan relevantes es muy importante tomar en cuenta que hay personas que en el campo Ingreso Laboral consta la cantidad cero.
-Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado.  
+Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173103083_1652105149?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
 ## Ingreso Laboral máximo de cada etnia (Por año)
-<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173125170_-2053718798?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-## Ingreso laboral mínimo de cada etnia (Por año)
-
-<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173171592_35795173?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-## Ingreso Laboral promedio de cada etnia (Global)
-
-<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173247055_309013628?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-## Ingreso Laboral promedio de cada etnia (Por año)
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173125170_-2053718798?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+## Ingreso laboral mínimo de cada etnia (Por año)  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173171592_35795173?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+## Ingreso Laboral promedio de cada etnia (Global)  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173247055_309013628?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+## Ingreso Laboral promedio de cada etnia (Por año)  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173289405_-1925250001?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 
 ## Porcentaje donde el campo Ingreso Laboral es Nulo, de acuerdo a cada Etnia
