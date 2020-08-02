@@ -73,18 +73,18 @@ val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-### Datos de acuerdo  a cada Etnia
+### Datos de acuerdo  a cada Etnia  
 ```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
 val dataMes = dataProvCant.where($"etnia" === "6 - Mestizo")
 val dataBla = dataProvCant.where($"etnia" === "7 - Blanco")
-
 val data4Etnias = dataProvCant.where($"etnia" === "1 - Indígena" || $"etnia" === "5 - Montubio" || $"etnia" === "6 - Mestizo" || $"etnia" === "7 - Blanco")  
 ```  
 ## Ingreso Laboral máximo de cada etnia (Global)  
 La etnia Mestizo se encuentra con el ingreso laboral más elevado de 146030 llevando una ventaja abismal en comparación a las demás;
 la etnia Blanco con 60000, que considerando que la población que participo en la encuesta de Indígena y Montubio es más elevada en comparación con etnia Blanco aun así el ingreso laboral es más bajo.  
+
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 
 
