@@ -73,7 +73,7 @@ val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES
 <iframe src="https://9c87ae09337a.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-### Datas de acuerdo  a cada Etnia
+### Datos de acuerdo  a cada Etnia
 ```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
@@ -91,6 +91,8 @@ la etnia Blanco con 60000, que considerando que la población que participo en l
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 <iframe src="https://9c87ae09337a.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
+
+
 ## Ingreso Laboral mínimo de cada etnia (Global)
 Aunque la tabla no muestra datos tan relevantes es muy importante tomar en cuenta que hay personas que en el campo Ingreso Laboral consta la cantidad cero.
 Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado.
