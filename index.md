@@ -131,7 +131,6 @@ Mas adelante tomaremos en cuenta estos datos para realizar un análisis más det
 <iframe src="https://3533a2628400.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173392198_404145140?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
 Syntax highlighted code block
 
 # Header 1
