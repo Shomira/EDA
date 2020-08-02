@@ -1,7 +1,7 @@
 ## Esquema creado segun las especificaciones de los datos
 
 You can use the [editor on GitHub](https://github.com/Shomira/Present/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-```
+```scala
 
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
@@ -28,7 +28,7 @@ val myDataSchem = StructType(
 );
 ```
 ### Carga de Datos(Data General)
-```
+```scala
 import org.apache.spark.sql.functions.avg
 val data = spark
     .read
@@ -38,7 +38,7 @@ val data = spark
     .csv("/home/shomira/Documentos/Datos_ENEMDU_PEA_v2.csv")
 ```
 ### Carga de Datos(Provincias)
-```
+```scala
 val dataProv = spark
     .read
     .option("delimiter", ";")
@@ -48,12 +48,12 @@ val dataProv = spark
 ```
 ### Unión en base a las columnas en común(código de Provincia)
 - Spark no soporta columnas del mismo nombre y las elimina 
-```
+```scala
 val innerProvince = data.join(dataProv, "provincia")
 ```
 
 ### Carga de Datos(Cantones)
-```
+```scala
  val dataCant = spark
     .read
     .option("delimiter", ",")
@@ -64,17 +64,17 @@ val innerProvince = data.join(dataProv, "provincia")
 ```
 ### Unión en base a las columnas en común(código de Cantón )
 - uso de la data que tienen los nombres de las provincias
-```
+```scala
 val dataProvCantones = innerProvince.join(dataCant, innerProvince("canton") === dataCant("codigoCanton"), "inner")
 ```
 ### Eliminar las columnas que no se Usaran
-```
+```scala
 val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES
 <iframe src="https://9c87ae09337a.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 ### Datas de acuerdo  a cada Etnia
-```
+```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
 val dataMes = dataProvCant.where($"etnia" === "6 - Mestizo")
