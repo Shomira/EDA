@@ -50,9 +50,8 @@ val dataProv = spark
 - Spark no soporta columnas del mismo nombre y las elimina 
 ```scala
 val innerProvince = data.join(dataProv, "provincia")
-```
-
-### Carga de Datos(Cantones)
+```  
+### Carga de Datos(Cantones)  
 ```scala
  val dataCant = spark
     .read
@@ -60,53 +59,41 @@ val innerProvince = data.join(dataProv, "provincia")
     .option("header","true")
     .option("inferSchema", "true")
     .csv("/home/shomira/Documentos/Cantones.csv")
-
-```
-### Unión en base a las columnas en común(código de Cantón )
-- uso de la data que tienen los nombres de las provincias
+```  
+### Unión en base a las columnas en común(código de Cantón )  
+- uso de la data que tienen los nombres de las provincias  
 ```scala
 val dataProvCantones = innerProvince.join(dataCant, innerProvince("canton") === dataCant("codigoCanton"), "inner")
-```
+```  
 ### Eliminar las columnas que no se Usaran  
 ```scala
 val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")  
 ```  
-## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES 
-<div>
+## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
- </div> 
-  ### Datos de acuerdo  a cada Etnia  
-  ```scala
+### Datos de acuerdo  a cada Etnia  
+```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
 val dataMes = dataProvCant.where($"etnia" === "6 - Mestizo")
 val dataBla = dataProvCant.where($"etnia" === "7 - Blanco")
 val data4Etnias = dataProvCant.where($"etnia" === "1 - Indígena" || $"etnia" === "5 - Montubio" || $"etnia" === "6 - Mestizo" || $"etnia" === "7 - Blanco")  
-  
-  ```  
-  ## Ingreso Laboral máximo de cada etnia (Global)  
-  La etnia Mestizo se encuentra con el ingreso laboral más elevado de 146030 llevando una ventaja abismal en comparación a las demás;  
-  la etnia Blanco con 60000, que considerando que la población que participo en la encuesta de Indígena y Montubio es más elevada en comparación con etnia Blanco  aun así el ingreso laboral es más bajo.  
-  <div>
-  <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-  </div>
-  ## Ingreso Laboral mínimo de cada etnia (Global)  
-  Aunque la tabla no muestra datos tan relevantes es muy importante tomar en cuenta que hay personas que en el campo Ingreso Laboral consta la cantidad cero.  
-  Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado  
-  <div>
-  <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173103083_1652105149?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
-  </div>
-  ## Ingreso Laboral máximo de cada etnia (Por año)  
-  <div>
-  <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173125170_-2053718798?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
-  </div>
-  ## Ingreso laboral mínimo de cada etnia (Por año)  
-  <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173171592_35795173?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+```  
+## Ingreso Laboral máximo de cada etnia (Global)  
+La etnia Mestizo se encuentra con el ingreso laboral más elevado de 146030 llevando una ventaja abismal en comparación a las demás;  
+la etnia Blanco con 60000, que considerando que la población que participo en la encuesta de Indígena y Montubio es más elevada en comparación con etnia Blanco  aun así el ingreso laboral es más bajo.  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+## Ingreso Laboral mínimo de cada etnia (Global)  
+Aunque la tabla no muestra datos tan relevantes es muy importante tomar en cuenta que hay personas que en el campo Ingreso Laboral consta la cantidad cero.Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173103083_1652105149?asIframe" style="width: 500px; height: 13px; border: 0px"></iframe>  
+## Ingreso Laboral máximo de cada etnia (Por año)  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173125170_-2053718798?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
+## Ingreso laboral mínimo de cada etnia (Por año)  
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173171592_35795173?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
 ## Ingreso Laboral promedio de cada etnia (Global)  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173247055_309013628?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
 ## Ingreso Laboral promedio de cada etnia (Por año)  
-<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173289405_-1925250001?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
-
+<iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173289405_-1925250001?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
 ## Porcentaje donde el campo Ingreso Laboral es Nulo, de acuerdo a cada Etnia
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173392198_404145140?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>
 ## Porcentaje donde Ingreso Laboral sea menor al salario básico, de acuerdo a cada Etnia
