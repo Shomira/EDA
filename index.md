@@ -80,8 +80,7 @@ val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
 val dataMes = dataProvCant.where($"etnia" === "6 - Mestizo")
 val dataBla = dataProvCant.where($"etnia" === "7 - Blanco")
 
-val data4Etnias = dataProvCant.where($"etnia" === "1 - Indígena" || $"etnia" === "5 - Montubio" || $"etnia" === "6 - Mestizo" || $"etnia" === "7 - Blanco") 
-
+val data4Etnias = dataProvCant.where($"etnia" === "1 - Indígena" || $"etnia" === "5 - Montubio" || $"etnia" === "6 - Mestizo" || $"etnia" === "7 - Blanco")  
 ```  
 ## Ingreso Laboral máximo de cada etnia (Global)  
 La etnia Mestizo se encuentra con el ingreso laboral más elevado de 146030 llevando una ventaja abismal en comparación a las demás;
