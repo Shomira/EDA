@@ -82,10 +82,10 @@ val data4Etnias = dataProvCant.where($"etnia" === "1 - Indígena" || $"etnia" ==
 ## Ingreso Laboral máximo de cada etnia (Global)  
 La etnia Mestizo se encuentra con el ingreso laboral más elevado de 146030 llevando una ventaja abismal en comparación a las demás;  
 la etnia Blanco con 60000, que considerando que la población que participo en la encuesta de Indígena y Montubio es más elevada en comparación con etnia Blanco  aun así el ingreso laboral es más bajo.  
-<iframe  width: "300" height: "200" src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe"></iframe>  
+<iframe  width: "600" height: "700" src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864615527_-249742713?asIframe"></iframe>  
 ## Ingreso Laboral mínimo de cada etnia (Global)  
 Aunque la tabla no muestra datos tan relevantes es muy importante tomar en cuenta que hay personas que en el campo Ingreso Laboral consta la cantidad cero.Mas adelante tomaremos en cuenta estos datos para realizar un análisis más detallado  
-<iframe  width: "300" height: "200" src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173103083_1652105149?asIframe"></iframe>  
+<iframe  width: "800" height: "1000" src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173103083_1652105149?asIframe"></iframe>  
 ## Ingreso Laboral máximo de cada etnia (Por año)  
 <iframe src="https://f883705c1fb4.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173125170_-2053718798?asIframe" style="width: 500px; height: 130px; border: 0px"></iframe>  
 ## Ingreso laboral mínimo de cada etnia (Por año)  
