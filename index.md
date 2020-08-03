@@ -130,7 +130,7 @@ Aquí vemos que gran parte de la los que se encuetran en la rama **A. Agricultur
 <iframe src="https://a79b80d73425.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596173991582_-354416295?asIframe" style="width: 900px; height: 500px; border: 0px"></iframe>  
 ## Distribución de personas en cada rama de actividad que tengan un nivel de instrucción secundaria según cada etnia
 En esta gráfica, ya podemos notar un cambio en la etnia **Mestizo** pues la rama **G. Comercio, reparación vehículos** se posiciono como la de mayor freccuencia, mostrandonos que en esta etnia, un solo nivel mayor de instrucción permite el paso de productores, a trabajos más especializados.
-<iframe src="https://a79b80d73425.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596174034680_-77341744?asIframe" style="width: 700px; height: 500px; border: 0px"></iframe>  
+<iframe src="https://a79b80d73425.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596425907578_1946002424?asIframe" style="width: 700px; height: 500px; border: 0px"></iframe>  
 ## Numero de mujeres por cada año y por etnia que pertenecieron a la rama_actividad  Agricultura, ganadería caza y silvicultura y pesca  
 Podemos observar en la gráfica, que en esta rama para las etnias **Mestizo** y **Blanco** en cierta forma se ha mantenido la frecuencia de mujeres, sin variaciones muy significativas. En cambio, para la etnia **Montubio** ha tenido un incremento a través de los años, contrario a la **Indígena** que va en decremento.  
 <iframe src="https://a79b80d73425.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596174069678_742123978?asIframe" style="width: 600px; height: 300px; border: 0px"></iframe>  
