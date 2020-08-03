@@ -1,3 +1,4 @@
+# EDA
 ## Esquema creado segun las especificaciones de los datos
 
 ```scala
@@ -63,7 +64,7 @@ val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES  
 Podemos ver que la frecuencia no es nada equitativa, y para realizar un mejor análisis solo se considerarán las cuatro etnias que más han participado en la encuesta.  
 <iframe src="https://59da25dd4f56.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 3000px; border: 0px"></iframe>  
-### DataFrames de Interés
+## DataFrames de Interés  
 ```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
 val dataMon = dataProvCant.where($"etnia" === "5 - Montubio")
