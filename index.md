@@ -1,6 +1,9 @@
-# EDA
-## Esquema creado segun las especificaciones de los datos
-
+# INTRODUCCIÓN  
+Partiendo de la revisión de un archivo que contiene información sobre el desempleo en el Ecuador, información que se encuentra disponible en la página del 
+[INEC](https://www.ecuadorencifras.gob.ec/empleo-diciembre-2019/)(Instituto Nacional de Encuestas y Censos), con el nombre Encuesta de Empleo, Desempleo y Subempleo (ENEMDU), la encuesta cuenta con los datos desde el año 2014 hasta el 2019. Dentro de los datos de cada uno de los encuestados están :  
+Un **id(identificador único)** para cada persona encuestada, **año**, **mes**, **Provincia**, **Cantón**, **Área, Genero, Edad, Estado Civil, Nivel de  
+Instrucción, Etnia, IngresoLaboral, Condición de Actividad, Sectorización, Grupo de Ocupación, Rama de Actividad, Factor de Expansión**.  
+## Esquema creado segun las especificaciones de los datos  
 ```scala
 
 import org.apache.spark.sql.types._
@@ -26,8 +29,8 @@ val myDataSchem = StructType(
     StructField("factor_expansion", DoubleType, true)
   )
 );
-```
-### Carga de Datos(Data General)
+```  
+### Carga de Datos(Data General)  
 ```scala
 import org.apache.spark.sql.functions.avg
 val data = spark
@@ -36,8 +39,8 @@ val data = spark
     .option("delimiter", "\t")
     .option("header","true")
     .csv("/home/shomira/Documentos/Datos_ENEMDU_PEA_v2.csv")
-```
-### Carga de Datos(Provincias)
+```  
+### Carga de Datos(Provincias)  
 ```scala
 val dataProv = spark
     .read
@@ -63,7 +66,7 @@ val dataProvCant = dataProvCantones.drop("canton", "codigoCanton")
 ```  
 ## FRECUENCIA DE DATOS EN LAS 4 ETNIAS PRINCIPALES  
 Podemos ver que la frecuencia no es nada equitativa, y para realizar un mejor análisis solo se considerarán las cuatro etnias que más han participado en la encuesta.  
-<iframe src="https://59da25dd4f56.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 3000px; border: 0px"></iframe>  
+<iframe src="https://59da25dd4f56.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1595864391672_293456322?asIframe" style="width: 500px; height: 300px; border: 0px"></iframe>  
 ## DataFrames de Interés  
 ```scala
 val dataInd = dataProvCant.where($"etnia" === "1 - Indígena")
@@ -158,29 +161,3 @@ Por cada etnia se ha realizado el análisis de la edad mínima de las etnias, ob
 Analizando el nivel de instrucción de esta población, por cada etnia se evidencia que la **Mestizo** e **Indígena** radican en los niveles **Primaria** y **Ninguno**. Implicando esto la importancia de un buen nivel de instrucción.  
 <iframe src="https://59da25dd4f56.ngrok.io/#/notebook/2FF95PR8V/paragraph/paragraph_1596420547727_-1112385428?asIframe" style="width: 600px; height: 300px; border: 0px"></iframe>
 
-
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Shomira/Present/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
